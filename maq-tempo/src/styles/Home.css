@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-y: hidden;
+  outline: 1px solid red;
 }
 .navbar{
   display: flex;
@@ -79,6 +80,9 @@ h1{
   font-style: normal;
   font-size: 50px;
 }
+
+
+
 
 
 .info-promo{
@@ -235,6 +239,9 @@ height: 93vh;
 
 
 @media only screen and (max-width: 600px) {
+  body{
+    overflow-y: hidden;
+  }
   .calendare{
     display: flex;
     flex-direction: column;
@@ -244,5 +251,34 @@ height: 93vh;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+  .descontos{
+    display: none;
+  }
+  .container2{
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+  }
+  .anuncio{
+    background: none;
+    backdrop-filter: none;
+    display: flex;
+    float: none;
+  }
+  .promocao{
+    float: none;
+    background: none;
+    display: flex;
+  }
+  .info{
+    margin-left: 30px;
+  }
+  .info-promo1{
+    background: none;
+    backdrop-filter: none;
+  }
+  .info-promo2{
+    background: none;
   }
 }
