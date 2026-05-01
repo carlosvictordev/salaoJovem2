@@ -1,0 +1,248 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(32, 30, 28, 0.5);
+}
+.container2{
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("../assets/fundo2\ \(2\).jpg");
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 0px;
+}
+.geral-itens{
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+}
+.itens a{
+    font-size: 20px;
+}
+
+
+
+
+
+
+.anuncio{
+  display: flex;
+  float: left;
+  width: 30%; 
+  height: 100vh;
+  flex-direction: column;
+
+  background: linear-gradient(
+  135deg,
+  rgba(255,255,255,0.01),
+  rgba(255,255,255,0.01)
+);
+backdrop-filter: blur(5px);
+}
+button{
+  background: linear-gradient(90deg, #493105, #000000);
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 200px;
+  margin-top: 20px;
+}
+button:hover {
+  transform: scale(1.03);
+}
+.info{
+  display: flex;
+  margin-left: 100px;
+  margin-top: 30%;
+  flex-direction: column;
+}
+h1{
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+
+    font-family: "Literata", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 50px;
+}
+
+
+.info-promo{
+  overflow-y: scroll;
+}
+.info-promo::-webkit-scrollbar {
+  display: none;
+}
+.info-promo1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: linear-gradient(
+  135deg,
+  rgba(255,255,255,0.01),
+  rgba(255,255,255,0.04)
+);
+  backdrop-filter: blur(60px);
+
+}
+.promocao{
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  background: linear-gradient(
+  135deg,
+  rgba(255,255,255,0.01),
+  rgba(255,255,255,0.01)
+);
+backdrop-filter: blur(5px);
+width: 35%;
+height: 93vh;
+}
+.promocao h1{
+  font-size: 30px;
+}
+.card-anuncio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card-anuncio img{
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px
+}
+.card-anuncio p{
+  text-align: center;
+  color: white;
+
+  font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.info-promo2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: linear-gradient(
+  135deg,
+  rgba(255,255,255,0.01),
+  rgba(255,255,255,0.04)
+);
+  backdrop-filter: blur(60px);
+  padding: 20px;
+
+}
+
+
+
+
+
+
+
+
+.container4{
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("../assets/fundo2\ \(2\).jpg");
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 0px;
+  flex-direction: column;
+  display: flex;
+}
+.calendare-geral{
+  font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+}
+.calendare-geral h1{
+  font-size: 30px;
+}
+.calendare{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center
+}
+.calendare h2{
+  color: white;
+}
+.days{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.days h2{
+  color: white;
+}
+.resume p{
+    color: rgb(177, 177, 177);
+}
+
+
+
+
+
+
+
+
+
+.container5{
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("../assets/fundo2\ \(2\).jpg");
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 0px;
+  flex-direction: column;
+  display: flex;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .calendare{
+    display: flex;
+    flex-direction: column;
+  }
+  .resume{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}

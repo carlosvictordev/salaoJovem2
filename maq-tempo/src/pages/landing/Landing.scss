@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  height: 100vh;
+}
+.landing {
+    width: 100%;
+    height: 100%;
+
+    background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("../../assets/fundoHome.jpg");
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+}
+.objetos {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+}
+
+.card {
+    width: 400px;
+    height: auto;
+    padding: 40px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+
+    button{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  background: linear-gradient(90deg, #493105, #000000);
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+    button:hover {
+    transform: scale(1.03);
+    }
+
+}
+.login,
+.senha {
+    margin-bottom: 40px;
+    text-align: center;
+    h2{
+    margin-bottom: 10px;
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    }
+    button{
+        margin-top: 30px;
+    }
+
+}
+a{
+    color: #c2a062;
+    font-size: 15px;
+    text-decoration: none;
+  position: relative;
+
+    
+}
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ffffff, #493105);
+  transition: 0.3s;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: rgb(98, 158, 226);
+
+    background: rgba(255,255,255,0.1);
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+}
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 10px;
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+select{
+    height: 40px;
+}
+.phone{
+    flex-direction: row;
+    display: flex;
+}
+.buttons{
+    button{
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .container{
+        background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("../../assets/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    }
+}
+@media only screen and (max-width: 1500px) {
+    body{
+        background-repeat: no-repeat;
+        background-position-y: 0px;
+    }
+}
+
