@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faHouse, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import NavBarPhone from "./elements/NavbarPhone";
 
 import Noticia from "../assets/noticia1.jpg";
 import Noticia2 from "../assets/noticia2.jpg";
@@ -18,6 +19,7 @@ function Home(){
     return(
         <>
         <div className="container2">
+        <NavBarPhone/>
             <nav>
             <div className="navbar">
                 <div className="geral-itens">
@@ -28,6 +30,7 @@ function Home(){
             </div>
             </nav>
             
+            
         <header>
             <div className="container3">
                 <div className="anuncio">
@@ -36,23 +39,35 @@ function Home(){
                     <button onClick={Agenda}>AGENDAR</button>
                     </div>
                 </div>
+                <div className="slider-geral">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src={Noticia} />
+                            <img src={Noticia2} />
+                            <img src={Noticia3} />
+                            <img src={Noticia4} />
+                        </div>
+                    </div>
+                </div>
+
+
                 <div className="descontos">
                     <div className="promocao">
                         <h1>Notícias</h1>
                         <div className="info-promo">
                         <div className="info-promo1">
-                                <div className="card-anuncio">
+                                <div className="card-anuncio" onClick={Agenda}>
                                     <img src={Noticia} alt=""/>
                                     <p>Desconto de 20% <br /> em todos os cortes</p>
                                 </div>
                         </div>
                         <div className="info-promo2">
-                            <div className="card-anuncio">
+                            <div className="card-anuncio" onClick={Agenda}>
                                 <img src={Noticia2} alt=""/>
                                 <p>Melhores babeiros <br />da região</p>
                             </div>
                         </div>
-                        <div className="info-promo2">
+                        <div className="info-promo2" onClick={Agenda}>
                             <div className="card-anuncio">
                                 <img src={Noticia4} alt=""/>
                                 <p>Confiança e Comprometimento</p>

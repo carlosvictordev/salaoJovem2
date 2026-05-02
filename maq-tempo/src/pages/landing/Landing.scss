@@ -63,6 +63,8 @@ body{
     transform: scale(1.03);
     }
 
+
+    animation: entradaLanding 1s ease-in-out;
 }
 .login,
 .senha {
@@ -153,20 +155,35 @@ select{
     }
 }
 
+@keyframes entradaLanding{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 
 
 
 
 
 @media only screen and (max-width: 600px) {
-    .container{
+    .landing{
         background: 
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url("../../assets/fundo.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    background-position: center;
 
+    }
+    .card{
+        width: 300px;
     }
 }
 @media only screen and (max-width: 1500px) {

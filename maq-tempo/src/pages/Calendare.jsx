@@ -3,6 +3,7 @@ import "../styles/Home.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faHouse, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
+import NavBarPhone from "./elements/NavbarPhone";
 
 function Calendare(){
     const schedule = {
@@ -28,6 +29,7 @@ function Calendare(){
         <>
         <div className="container4">
             <NavBar/>
+            <NavBarPhone/>
             <div className="calendare-geral">
       <h1 style={{ textAlign: "center" }}>Agende seu horário</h1>
       <br />

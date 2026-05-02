@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-y: hidden;
+  overflow-x: hidden;
   outline: 1px solid red;
 }
 .navbar{
@@ -31,6 +32,31 @@ html, body {
 }
 
 
+.bottom-nav {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: none;
+  gap: 20px;
+
+  padding: 12px 24px;
+  border-radius: 30px;
+
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 
 
 
@@ -48,6 +74,8 @@ html, body {
   rgba(255,255,255,0.01)
 );
 backdrop-filter: blur(5px);
+
+  animation: entrada 0.5s ease ;
 }
 button{
   background: linear-gradient(90deg, #493105, #000000);
@@ -84,7 +112,9 @@ h1{
 
 
 
-
+.slider{
+  display: none;
+}
 .info-promo{
   overflow-y: scroll;
 }
@@ -103,6 +133,11 @@ h1{
 );
   backdrop-filter: blur(60px);
 
+  transition: transform 0.3s ease-in-out;
+}
+.info-promo1:hover{
+  transform: scale(1.04);
+  cursor: pointer;
 }
 .promocao{
   float: right;
@@ -119,6 +154,8 @@ h1{
 backdrop-filter: blur(5px);
 width: 35%;
 height: 93vh;
+
+animation: entrada2 0.5s ease ;
 }
 .promocao h1{
   font-size: 30px;
@@ -159,6 +196,33 @@ height: 93vh;
   backdrop-filter: blur(60px);
   padding: 20px;
 
+  transition: transform 0.3s ease-in-out;
+}
+.info-promo2:hover{
+  transform: scale(1.04);
+  cursor: pointer;
+}
+@keyframes entrada{
+  from{
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+
+  }
+}
+@keyframes entrada2{
+  from{
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+
+  }
 }
 
 
@@ -194,7 +258,9 @@ height: 93vh;
   display: flex;
   gap: 20px;
   justify-content: center;
-  align-items: center
+  align-items: center;
+
+  animation: entrada3 0.5s ease ;
 }
 .calendare h2{
   color: white;
@@ -211,6 +277,18 @@ height: 93vh;
 }
 .resume p{
     color: rgb(177, 177, 177);
+}
+@keyframes entrada3{
+  from{
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+
+  }
+
 }
 
 
@@ -233,6 +311,97 @@ height: 93vh;
   flex-direction: column;
   display: flex;
 }
+.conta-geral{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 70px;
+
+  animation: entrada4 0.5s ease ;
+}
+.user{
+  background: rgba(73, 49, 5, 0.7);
+  padding: 20px;
+  border-radius: 30px;
+  display: flex;
+
+
+  transition: transform 0.3s ease-in-out;
+}
+.user p{
+  color: white;
+  display: block;
+}
+.user:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.options{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  gap: 50px;
+}
+.first-options{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px
+}
+.first-options p{
+  color: rgba(200, 200, 200, 0.8);
+}
+.secundary-options{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px
+}
+.secundary-options{
+  color: rgba(200, 200, 200, 0.8);
+}
+.option{
+  background: rgba(73, 49, 5, 0.7);
+  width: 340px;
+  padding: 20px;
+  border-radius: 20px;
+
+
+  font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+
+    transition: transform 0.3s ease-in-out;
+}
+.option:hover{
+  transform: scale(1.02);
+  cursor: pointer;
+}
+@keyframes entrada4{
+  from{
+    transform: translateY(150px);
+    opacity: 0;
+    }
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+
+  }
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -240,7 +409,10 @@ height: 93vh;
 
 @media only screen and (max-width: 600px) {
   body{
-    overflow-y: hidden;
+    overflow-y: scroll;
+  }
+  .navbar{
+    display: flex
   }
   .calendare{
     display: flex;
@@ -265,6 +437,8 @@ height: 93vh;
     backdrop-filter: none;
     display: flex;
     float: none;
+
+    height: 100%;
   }
   .promocao{
     float: none;
@@ -273,6 +447,7 @@ height: 93vh;
   }
   .info{
     margin-left: 30px;
+    margin-top: 30px;
   }
   .info-promo1{
     background: none;
@@ -281,4 +456,51 @@ height: 93vh;
   .info-promo2{
     background: none;
   }
+  .bottom-nav{
+    display: flex;
+  }.navbar{
+    display: none;
+  }
+  .slider-geral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .slider {
+    gap: 20px;
+    width: 100%;
+  width: 100%;
+  max-width: 250px;
+  overflow-x: scroll;
+  border-radius: 12px;
+  display: flex;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+.slides {
+  display: flex;
+  width: 100%;
+  animation: slide 12s infinite;
+}
+
+.slides img {
+  width: 100%;
+  max-width: 180px;
+  object-fit: cover;
+}
+
+/* Animação */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+.conta-geral{
+    margin-top: 100px;
+}
 }
